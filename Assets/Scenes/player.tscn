@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb3wrkynue3f3"]
+
+[ext_resource type="Texture2D" uid="uid://dv5p66qcty6nc" path="res://Assets/Sprites/Idle (32x32).png" id="1_6cd4h"]
+[ext_resource type="Script" uid="uid://baa3pus2d4l7t" path="res://Assets/Scripts/player_controller.gd" id="1_7dd06"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dd06"]
+size = Vector2(23, 26)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_7dd06")
+speed = 6.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="AgentAnimator" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AgentAnimator"]
+root_node = NodePath("../..")
+
+[node name="Sprite2D" type="Sprite2D" parent="AgentAnimator"]
+texture = ExtResource("1_6cd4h")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 3)
+shape = SubResource("RectangleShape2D_7dd06")
