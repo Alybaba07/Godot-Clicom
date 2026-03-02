@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bk8kpdpr0fj3i"]
 
-[ext_resource type="Script" uid="uid://bi7o0ype8na5h" path="res://main_menu.gd" id="1_x6jn2"]
+[ext_resource type="Script" uid="uid://bi7o0ype8na5h" path="res://Assets/Scripts/main_menu.gd" id="1_x6jn2"]
 [ext_resource type="Texture2D" uid="uid://bghage8od4fdy" path="res://Assets/Menu Buttons/Large Buttons/Large Buttons/Play Button.png" id="2_cbhea"]
 [ext_resource type="Texture2D" uid="uid://cyxnscl8vxkm8" path="res://Assets/Menu Buttons/Large Buttons/Colored Large Buttons/Play col_Button.png" id="3_6qsvb"]
 [ext_resource type="Texture2D" uid="uid://by5oinumlq1pw" path="res://Assets/Menu Buttons/Large Buttons/Large Buttons/Quit Button.png" id="3_tanm1"]
