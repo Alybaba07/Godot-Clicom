@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c7n384m7ea28x" path="res://Assets/Sprites/Terrain (16x16).png" id="1_uidp5"]
 [ext_resource type="PackedScene" uid="uid://bb3wrkynue3f3" path="res://Assets/Scenes/player.tscn" id="2_3uyhe"]
+[ext_resource type="PackedScene" uid="uid://dvxctj6cmm7ra" path="res://Assets/Scenes/object.tscn" id="3_8wi1m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3uyhe"]
 texture = ExtResource("1_uidp5")
@@ -173,3 +174,12 @@ layer_0/tile_data = PackedInt32Array(2097160, 458752, 4, 2097161, 458752, 4, 209
 
 [node name="Player" parent="." unique_id=1931225162 instance=ExtResource("2_3uyhe")]
 position = Vector2(370, 496)
+
+[node name="object" parent="." unique_id=2002155083 instance=ExtResource("3_8wi1m")]
+position = Vector2(528, 469)
+
+[node name="object2" parent="." unique_id=1517098380 instance=ExtResource("3_8wi1m")]
+position = Vector2(631, 453)
+
+[node name="object3" parent="." unique_id=1277381205 instance=ExtResource("3_8wi1m")]
+position = Vector2(202, 498)
