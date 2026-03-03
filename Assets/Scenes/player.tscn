@@ -72,10 +72,10 @@ zoom = Vector2(3, 3)
 
 [node name="Label" type="Label" parent="Camera2D" unique_id=418223107]
 unique_name_in_owner = true
-offset_left = 131.0
-offset_top = -106.0
-offset_right = 190.0
-offset_bottom = -83.0
+offset_left = 128.0
+offset_top = -104.0
+offset_right = 187.0
+offset_bottom = -81.0
 text = "Point: 0"
 
 [node name="PlayerAnimator" type="Node2D" parent="." unique_id=1098788872 node_paths=PackedStringArray("player_controller", "animation_player", "sprite")]
