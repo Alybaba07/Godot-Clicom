@@ -69,6 +69,7 @@ jump_power = 8.5
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=674894859]
 zoom = Vector2(3, 3)
+drag_vertical_offset = -0.5
 
 [node name="Label" type="Label" parent="Camera2D" unique_id=418223107]
 unique_name_in_owner = true

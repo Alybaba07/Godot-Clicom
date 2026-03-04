@@ -41,3 +41,7 @@ offset_top = 317.14285
 offset_right = 834.2857
 offset_bottom = 517.1429
 texture_normal = ExtResource("3_48c7y")
+
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
