@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://kktii1h0t2cc"]
+
+[ext_resource type="Texture2D" uid="uid://yr6x7yvh1qvq" path="res://Assets/Menu Buttons/Large Buttons/Large Buttons/Resume Button.png" id="1_dadan"]
+[ext_resource type="Script" uid="uid://f5mtagr3fcyc" path="res://Assets/Scripts/pause_menu.gd" id="1_kvkuv"]
+[ext_resource type="Texture2D" uid="uid://c4qlkgxqe4bnb" path="res://Assets/Menu Buttons/Large Buttons/Large Buttons/Menu Button.png" id="2_kvkuv"]
+[ext_resource type="Texture2D" uid="uid://by5oinumlq1pw" path="res://Assets/Menu Buttons/Large Buttons/Large Buttons/Quit Button.png" id="3_48c7y"]
+
+[node name="Pause Menu" type="Control" unique_id=198651107]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 221.0
+offset_top = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_kvkuv")
+
+[node name="Resume" type="TextureButton" parent="." unique_id=1147137911]
+layout_mode = 0
+offset_left = 232.85716
+offset_top = -131.42856
+offset_right = 832.8572
+offset_bottom = 68.57144
+texture_normal = ExtResource("1_dadan")
+
+[node name="Menu" type="TextureButton" parent="." unique_id=548991142]
+layout_mode = 0
+offset_left = 231.42857
+offset_top = 92.857124
+offset_right = 831.4286
+offset_bottom = 292.85712
+texture_normal = ExtResource("2_kvkuv")
+
+[node name="Quit" type="TextureButton" parent="." unique_id=710332344]
+layout_mode = 0
+offset_left = 234.28572
+offset_top = 317.14285
+offset_right = 834.2857
+offset_bottom = 517.1429
+texture_normal = ExtResource("3_48c7y")
+
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

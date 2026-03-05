@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c7n384m7ea28x" path="res://Assets/Sprites/Terrain (16x16).png" id="1_uidp5"]
 [ext_resource type="PackedScene" uid="uid://bb3wrkynue3f3" path="res://Assets/Scenes/player.tscn" id="2_3uyhe"]
 [ext_resource type="PackedScene" uid="uid://dvxctj6cmm7ra" path="res://Assets/Scenes/object.tscn" id="3_8wi1m"]
+[ext_resource type="PackedScene" uid="uid://kktii1h0t2cc" path="res://Assets/Scenes/pause_menu.tscn" id="4_ql8qi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3uyhe"]
 texture = ExtResource("1_uidp5")
@@ -183,3 +184,17 @@ position = Vector2(631, 453)
 
 [node name="object3" parent="." unique_id=1277381205 instance=ExtResource("3_8wi1m")]
 position = Vector2(202, 498)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=648020375]
+scale = Vector2(0.5, 0.5)
+transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
+
+[node name="Pause Menu" parent="CanvasLayer" unique_id=198651107 instance=ExtResource("4_ql8qi")]
+anchors_preset = -1
+anchor_bottom = 0.808
+offset_left = 784.0
+offset_top = 512.0
+offset_right = 784.0
+offset_bottom = 636.41595
+size_flags_horizontal = 4
+size_flags_vertical = 4
