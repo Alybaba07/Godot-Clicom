@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ofko5mlkab74" path="res://Assets/Assets_Download_Itchio/Terrain/Terrain (16x16).png" id="1_y4hc0"]
 [ext_resource type="PackedScene" uid="uid://bb3wrkynue3f3" path="res://Assets/Scenes/player.tscn" id="2_fsu62"]
+[ext_resource type="PackedScene" uid="uid://bj5dwu6bdjm05" path="res://Assets/Scenes/area_change.tscn" id="3_fsu62"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oqdf5"]
 texture = ExtResource("1_y4hc0")
@@ -172,3 +173,6 @@ layer_0/tile_data = PackedInt32Array(2097171, 458752, 0, 2097172, 458752, 0, 209
 
 [node name="Player" parent="." unique_id=843527554 instance=ExtResource("2_fsu62")]
 position = Vector2(394, 496)
+
+[node name="AreaChange" parent="." unique_id=481098005 instance=ExtResource("3_fsu62")]
+position = Vector2(1409, 470)

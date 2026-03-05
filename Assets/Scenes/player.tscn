@@ -73,10 +73,10 @@ drag_vertical_offset = -0.5
 
 [node name="Label" type="Label" parent="Camera2D" unique_id=418223107]
 unique_name_in_owner = true
-offset_left = 128.0
-offset_top = -104.0
-offset_right = 187.0
-offset_bottom = -81.0
+offset_left = 95.0
+offset_top = -114.0
+offset_right = 154.0
+offset_bottom = -91.0
 text = "Point: 0"
 
 [node name="PlayerAnimator" type="Node2D" parent="." unique_id=1098788872 node_paths=PackedStringArray("player_controller", "animation_player", "sprite")]

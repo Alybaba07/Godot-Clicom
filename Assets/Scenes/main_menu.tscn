@@ -20,20 +20,20 @@ scale = Vector2(0.75, 0.75)
 
 [node name="Start" type="TextureButton" parent="Control" unique_id=1924534484]
 layout_mode = 0
-offset_left = 446.66663
-offset_top = 194.66667
-offset_right = 1046.6666
-offset_bottom = 394.6667
+offset_left = 351.99994
+offset_top = 124.0
+offset_right = 951.99994
+offset_bottom = 324.0
 texture_normal = ExtResource("2_cbhea")
 texture_hover = ExtResource("3_6qsvb")
 stretch_mode = 0
 
 [node name="Quit" type="TextureButton" parent="Control" unique_id=1825311881]
 layout_mode = 0
-offset_left = 445.3333
-offset_top = 445.33334
-offset_right = 1045.3335
-offset_bottom = 645.3334
+offset_left = 350.66663
+offset_top = 374.6667
+offset_right = 950.6668
+offset_bottom = 574.66675
 texture_normal = ExtResource("3_tanm1")
 texture_hover = ExtResource("5_fadmi")
 
