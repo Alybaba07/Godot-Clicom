@@ -62,7 +62,7 @@ size = Vector2(23, 26)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38rej"]
 size = Vector2(23, 24)
 
-[node name="Player" type="CharacterBody2D" unique_id=843527554]
+[node name="Player" type="CharacterBody2D" unique_id=843527554 groups=["player"]]
 script = ExtResource("1_7dd06")
 speed = 5.5
 jump_power = 8.5
@@ -70,14 +70,6 @@ jump_power = 8.5
 [node name="Camera2D" type="Camera2D" parent="." unique_id=674894859]
 zoom = Vector2(3, 3)
 drag_vertical_offset = -0.5
-
-[node name="Label" type="Label" parent="Camera2D" unique_id=418223107]
-unique_name_in_owner = true
-offset_left = 95.0
-offset_top = -114.0
-offset_right = 154.0
-offset_bottom = -91.0
-text = "Point: 0"
 
 [node name="PlayerAnimator" type="Node2D" parent="." unique_id=1098788872 node_paths=PackedStringArray("player_controller", "animation_player", "sprite")]
 script = ExtResource("2_38rej")

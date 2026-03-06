@@ -175,4 +175,4 @@ layer_0/tile_data = PackedInt32Array(2097171, 458752, 0, 2097172, 458752, 0, 209
 position = Vector2(394, 496)
 
 [node name="AreaChange" parent="." unique_id=481098005 instance=ExtResource("3_fsu62")]
-position = Vector2(1409, 470)
+position = Vector2(669, 427)

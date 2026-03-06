@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_7qajf"]
 radius = 12.041595
 
-[node name="AreaChange" type="Area2D" unique_id=481098005 node_paths=PackedStringArray("sprite")]
+[node name="AreaChange" type="Area2D" unique_id=481098005 node_paths=PackedStringArray("sprite") groups=["area_change"]]
 collision_layer = 16384
 script = ExtResource("1_ys1hu")
 sprite = NodePath("Sprite2D")

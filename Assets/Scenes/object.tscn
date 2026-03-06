@@ -1,22 +1,20 @@
 [gd_scene format=3 uid="uid://dvxctj6cmm7ra"]
 
-[ext_resource type="Texture2D" uid="uid://h5fvpiwcuao6" path="res://Assets/Assets_Download_Itchio/Items/Fruits/Apple.png" id="1_fui51"]
 [ext_resource type="Script" uid="uid://djgkq2px6kxix" path="res://Assets/Scripts/object.gd" id="1_w624x"]
+[ext_resource type="Texture2D" uid="uid://cdpf2mcmj6jac" path="res://Assets/Sprites/Free-Cyberpunk-Resource-Pixel-Art-32x32-Icons/1 Icons/Icon14_32.png" id="2_w624x"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w624x"]
-radius = 7.0
-height = 16.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uitw6"]
+size = Vector2(12, 14)
 
 [node name="object" type="Area2D" unique_id=2002155083 groups=["object"]]
 script = ExtResource("1_w624x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1418973487]
-shape = SubResource("CapsuleShape2D_w624x")
+shape = SubResource("RectangleShape2D_uitw6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1663393880]
-position = Vector2(0, 2)
-texture = ExtResource("1_fui51")
-region_enabled = true
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_w624x")
 region_rect = Rect2(0, 0, 32, 32)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
