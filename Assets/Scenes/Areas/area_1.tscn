@@ -614,10 +614,11 @@ transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
 [node name="Pause Menu" parent="CanvasLayer" unique_id=198651107 instance=ExtResource("4_ql8qi")]
 anchors_preset = -1
 anchor_bottom = 0.808
-offset_left = 784.0
-offset_top = 512.0
-offset_right = 784.0
-offset_bottom = 636.41595
+offset_left = 606.0
+offset_top = 396.0
+offset_right = 750.3799
+offset_bottom = 551.68
+scale = Vector2(1, 1)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 

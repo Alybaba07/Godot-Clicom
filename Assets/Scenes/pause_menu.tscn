@@ -1,9 +1,15 @@
 [gd_scene format=3 uid="uid://kktii1h0t2cc"]
 
-[ext_resource type="Texture2D" uid="uid://yr6x7yvh1qvq" path="res://Assets/Menu Buttons/Large Buttons/Large Buttons/Resume Button.png" id="1_dadan"]
 [ext_resource type="Script" uid="uid://f5mtagr3fcyc" path="res://Assets/Scripts/pause_menu.gd" id="1_kvkuv"]
-[ext_resource type="Texture2D" uid="uid://c4qlkgxqe4bnb" path="res://Assets/Menu Buttons/Large Buttons/Large Buttons/Menu Button.png" id="2_kvkuv"]
-[ext_resource type="Texture2D" uid="uid://by5oinumlq1pw" path="res://Assets/Menu Buttons/Large Buttons/Large Buttons/Quit Button.png" id="3_48c7y"]
+[ext_resource type="Texture2D" uid="uid://btguj2rk2h1fg" path="res://Assets/Sprites/Buttons Customization/Buttons/Resume/A_Resume2.png" id="2_6nmhk"]
+[ext_resource type="Texture2D" uid="uid://dok6easdaomd8" path="res://Assets/Sprites/Buttons Customization/Buttons/Resume/A_Resume3.png" id="3_hdkeg"]
+[ext_resource type="Texture2D" uid="uid://ce8tlrnth25n0" path="res://Assets/Sprites/Buttons Customization/Buttons/Resume/A_Resume1.png" id="4_taxb1"]
+[ext_resource type="Texture2D" uid="uid://ctwmoipjbwh3m" path="res://Assets/Sprites/Buttons Customization/Buttons/Menu/A_Menu2.png" id="5_h54ie"]
+[ext_resource type="Texture2D" uid="uid://b27yy8i52b0s6" path="res://Assets/Sprites/Buttons Customization/Buttons/Menu/A_Menu3.png" id="6_3l3h0"]
+[ext_resource type="Texture2D" uid="uid://dyyv3dv2rpblp" path="res://Assets/Sprites/Buttons Customization/Buttons/Menu/A_Menu1.png" id="7_uynk4"]
+[ext_resource type="Texture2D" uid="uid://bentsvyv0sytq" path="res://Assets/Sprites/Buttons Customization/Buttons/Quit/A_Quit2.png" id="8_55hg2"]
+[ext_resource type="Texture2D" uid="uid://dmtpcqle854j3" path="res://Assets/Sprites/Buttons Customization/Buttons/Quit/A_Quit3.png" id="9_dj0rw"]
+[ext_resource type="Texture2D" uid="uid://bm7fhiafk3ch0" path="res://Assets/Sprites/Buttons Customization/Buttons/Quit/A_Quit1.png" id="10_d0rjr"]
 
 [node name="Pause Menu" type="Control" unique_id=198651107]
 process_mode = 3
@@ -21,26 +27,35 @@ script = ExtResource("1_kvkuv")
 [node name="Resume" type="TextureButton" parent="." unique_id=1147137911]
 layout_mode = 0
 offset_left = 57.142883
-offset_top = -188.57143
+offset_top = -182.85721
 offset_right = 657.1429
-offset_bottom = 11.428574
-texture_normal = ExtResource("1_dadan")
+offset_bottom = 17.142792
+texture_normal = ExtResource("2_6nmhk")
+texture_pressed = ExtResource("3_hdkeg")
+texture_hover = ExtResource("4_taxb1")
+stretch_mode = 0
 
 [node name="Menu" type="TextureButton" parent="." unique_id=548991142]
 layout_mode = 0
-offset_left = 55.714294
-offset_top = 35.71426
-offset_right = 655.7143
-offset_bottom = 235.71426
-texture_normal = ExtResource("2_kvkuv")
+offset_left = 60.0
+offset_top = 24.28572
+offset_right = 660.0
+offset_bottom = 224.28572
+texture_normal = ExtResource("5_h54ie")
+texture_pressed = ExtResource("6_3l3h0")
+texture_hover = ExtResource("7_uynk4")
+stretch_mode = 0
 
 [node name="Quit" type="TextureButton" parent="." unique_id=710332344]
 layout_mode = 0
-offset_left = 58.57144
-offset_top = 260.0
-offset_right = 658.5714
-offset_bottom = 460.00003
-texture_normal = ExtResource("3_48c7y")
+offset_left = 60.000015
+offset_top = 224.28574
+offset_right = 660.0
+offset_bottom = 424.28577
+texture_normal = ExtResource("8_55hg2")
+texture_pressed = ExtResource("9_dj0rw")
+texture_hover = ExtResource("10_d0rjr")
+stretch_mode = 0
 
 [connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
