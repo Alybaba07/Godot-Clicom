@@ -20,26 +20,26 @@ script = ExtResource("1_kvkuv")
 
 [node name="Resume" type="TextureButton" parent="." unique_id=1147137911]
 layout_mode = 0
-offset_left = 232.85716
-offset_top = -131.42856
-offset_right = 832.8572
-offset_bottom = 68.57144
+offset_left = 57.142883
+offset_top = -188.57143
+offset_right = 657.1429
+offset_bottom = 11.428574
 texture_normal = ExtResource("1_dadan")
 
 [node name="Menu" type="TextureButton" parent="." unique_id=548991142]
 layout_mode = 0
-offset_left = 231.42857
-offset_top = 92.857124
-offset_right = 831.4286
-offset_bottom = 292.85712
+offset_left = 55.714294
+offset_top = 35.71426
+offset_right = 655.7143
+offset_bottom = 235.71426
 texture_normal = ExtResource("2_kvkuv")
 
 [node name="Quit" type="TextureButton" parent="." unique_id=710332344]
 layout_mode = 0
-offset_left = 234.28572
-offset_top = 317.14285
-offset_right = 834.2857
-offset_bottom = 517.1429
+offset_left = 58.57144
+offset_top = 260.0
+offset_right = 658.5714
+offset_bottom = 460.00003
 texture_normal = ExtResource("3_48c7y")
 
 [connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]

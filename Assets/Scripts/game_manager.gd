@@ -8,10 +8,14 @@ var object = 0
 var area_container : Node2D
 var player : PlayerController
 
+var music_player : AudioStreamPlayer
 
 func _ready():
 	area_container = get_tree().get_first_node_in_group("area_container")
 	player = get_tree().get_first_node_in_group("player")
+	
+	music_player = AudioStreamPlayer.new()
+	add_child(music_player)
 	
 	if area_container == null:
 		return
@@ -47,3 +51,31 @@ func add_object():
 
 func reset_object():
 	object = 0
+	
+func play_menu_music():
+	if music_player.playing:
+		return
+		
+	var stream = load("res://Assets/Audio/Audio/Menu(shittyjazz).mp3")
+	if stream:
+		music_player.stream = stream
+		music_player.play()
+	
+func stop_music():
+	music_player.stop()
+	
+func play_sfx(sound_path: String):
+	var stream = load(sound_path)
+	if stream:
+		var audio_player = AudioStreamPlayer.new()
+		add_child(audio_player)
+		audio_player.stream = stream
+		
+		# Ajoute ces deux lignes pour varier un peu la hauteur du son
+		audio_player.pitch_scale = randf_range(0.9, 1.1) 
+		
+		audio_player.play()
+		audio_player.finished.connect(audio_player.queue_free)
+	else:
+		push_error("Impossible de trouver le fichier son : " + sound_path)
+		
