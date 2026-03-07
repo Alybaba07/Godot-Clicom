@@ -26,14 +26,14 @@ func _ready():
 
 func next_area():
 	current_area += 1
-	load_area(current_area)
+	load_area.call_deferred(current_area)
 
 func load_area(area_number):
 	var full_path = area_path + "area_" + str(area_number) + ".tscn"
 	
-	if not FileAccess.file_exists(full_path):
-		print("Erreur : Le fichier n'existe pas -> ", full_path)
-		return
+	#if not FileAccess.file_exists(full_path):
+		#print("Erreur : Le fichier n'existe pas -> ", full_path)
+		#return
 
 	get_tree().change_scene_to_file(full_path)
 	reset_object()
