@@ -23,10 +23,11 @@ scale = Vector2(0.75, 0.75)
 
 [node name="Start" type="TextureButton" parent="Control" unique_id=1924534484]
 layout_mode = 0
-offset_left = 351.99994
-offset_top = 145.33334
-offset_right = 951.99994
-offset_bottom = 345.33337
+offset_left = 334.66666
+offset_top = 122.666664
+offset_right = 934.6666
+offset_bottom = 322.6668
+scale = Vector2(1.5, 1.5)
 texture_normal = ExtResource("4_xkmpe")
 texture_pressed = ExtResource("3_hxcs8")
 texture_hover = ExtResource("2_shbfh")
@@ -34,10 +35,11 @@ stretch_mode = 0
 
 [node name="Quit" type="TextureButton" parent="Control" unique_id=1825311881]
 layout_mode = 0
-offset_left = 352.0
-offset_top = 389.3322
-offset_right = 952.0001
-offset_bottom = 589.3323
+offset_left = 334.66672
+offset_top = 438.6656
+offset_right = 934.66675
+offset_bottom = 638.6656
+scale = Vector2(1.5, 1.5)
 texture_normal = ExtResource("7_s067f")
 texture_pressed = ExtResource("6_jkcs5")
 texture_hover = ExtResource("5_pd3f2")

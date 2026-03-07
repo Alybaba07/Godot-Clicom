@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dtealwvtj1rsv"]
 
 [ext_resource type="Texture2D" uid="uid://ofko5mlkab74" path="res://Assets/Assets_Download_Itchio/Terrain/Terrain (16x16).png" id="1_higay"]
+[ext_resource type="Script" uid="uid://d120egs25h0e4" path="res://Assets/Scripts/base_level.gd" id="1_njbvn"]
 [ext_resource type="PackedScene" uid="uid://bb3wrkynue3f3" path="res://Assets/Scenes/player.tscn" id="2_njbvn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sylkb"]
@@ -167,6 +168,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_sylkb")
 
 [node name="Area4" type="Node2D" unique_id=102472613]
+script = ExtResource("1_njbvn")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=707776954]
 tile_set = SubResource("TileSet_o4i0f")
