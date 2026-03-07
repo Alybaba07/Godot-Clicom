@@ -17,5 +17,8 @@ func close():
 	sprite.region_rect.position.x = 0
 
 func _on_body_entered(body: Node2D) -> void:
+	print("Collision détectée avec : ", body.name)
 	if is_open && body is PlayerController:
+		print("Portail ouvert, changement de niveau")
 		GameManager.next_area()
+		GameManager.play_sfx("res://Assets/Audio/Audio/levelend.wav")

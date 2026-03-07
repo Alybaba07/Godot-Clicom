@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://ofko5mlkab74" path="res://Assets/Assets_Download_Itchio/Terrain/Terrain (16x16).png" id="1_q4ekm"]
 [ext_resource type="PackedScene" uid="uid://bb3wrkynue3f3" path="res://Assets/Scenes/player.tscn" id="2_oww6v"]
 [ext_resource type="PackedScene" uid="uid://bj5dwu6bdjm05" path="res://Assets/Scenes/area_change.tscn" id="3_oww6v"]
+[ext_resource type="PackedScene" uid="uid://kktii1h0t2cc" path="res://Assets/Scenes/pause_menu.tscn" id="4_y10e4"]
+[ext_resource type="AudioStream" uid="uid://0rv6iwbsxr53" path="res://Assets/Audio/Audio/level.mp3" id="5_oy882"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c28ru"]
 texture = ExtResource("1_q4ekm")
@@ -185,3 +187,12 @@ position = Vector2(472, 432)
 
 [node name="AreaChange" parent="." unique_id=481098005 instance=ExtResource("3_oww6v")]
 position = Vector2(1208, 452)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1124435539]
+
+[node name="Pause Menu" parent="CanvasLayer" unique_id=198651107 instance=ExtResource("4_y10e4")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=396126995]
+stream = ExtResource("5_oy882")
+volume_db = 5.0
+attenuation = 1e-05

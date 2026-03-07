@@ -27,27 +27,29 @@ func next_area():
 	load_area(current_area)
 
 func load_area(area_number):
-	if not is_instance_valid(area_container):
-		return
-
 	var full_path = area_path + "area_" + str(area_number) + ".tscn"
-	var scene = load(full_path) as PackedScene
 	
-	if !scene:
+	if not FileAccess.file_exists(full_path):
+		print("Erreur : Le fichier n'existe pas -> ", full_path)
 		return
 
-	for child in area_container.get_children():
-		child.queue_free()
-	
-	var instance = scene.instantiate()
-	area_container.add_child(instance)
+	get_tree().change_scene_to_file(full_path)
 	reset_object()
+	current_area = area_number
 	
 func add_object():
-	object += 1
-	if object >= 3:
+	await get_tree().process_frame
+	
+	var remaining_objects = get_tree().get_nodes_in_group("object")
+	
+	print("Objets restants : ", remaining_objects.size())
+	
+	if remaining_objects.size() == 0:
 		var portal = get_tree().get_first_node_in_group("area_change") as AreaChange
-		portal.open()
+		if portal:
+			portal.open()
+		else:
+			push_error("Portail non trouvé ! Vérifie qu'il est dans le groupe 'area_change'")
 
 func reset_object():
 	object = 0
