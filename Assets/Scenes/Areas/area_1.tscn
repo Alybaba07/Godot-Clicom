@@ -596,7 +596,7 @@ position = Vector2(99, 500)
 jump_power = 10.0
 
 [node name="object" parent="." unique_id=2002155083 instance=ExtResource("3_8wi1m")]
-position = Vector2(536, 407)
+position = Vector2(535, 457)
 
 [node name="object2" parent="." unique_id=1517098380 instance=ExtResource("3_8wi1m")]
 position = Vector2(632, 471)
@@ -605,6 +605,7 @@ position = Vector2(632, 471)
 position = Vector2(680, 438)
 
 [node name="AreaChange" parent="." unique_id=481098005 instance=ExtResource("4_7fk0h")]
+z_index = 1
 position = Vector2(1576, 496)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=648020375]
