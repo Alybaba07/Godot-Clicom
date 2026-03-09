@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://dvylui72wrgri"]
+
+[ext_resource type="Texture2D" uid="uid://ctwmoipjbwh3m" path="res://Assets/Sprites/Buttons Customization/Buttons/Menu/A_Menu2.png" id="1_d1ts3"]
+[ext_resource type="Script" uid="uid://d1fg6tsue5u5u" path="res://Assets/Scripts/win_screen.gd" id="1_vbpau"]
+[ext_resource type="Texture2D" uid="uid://b27yy8i52b0s6" path="res://Assets/Sprites/Buttons Customization/Buttons/Menu/A_Menu3.png" id="2_vbpau"]
+[ext_resource type="Texture2D" uid="uid://dyyv3dv2rpblp" path="res://Assets/Sprites/Buttons Customization/Buttons/Menu/A_Menu1.png" id="3_ko83w"]
+[ext_resource type="Texture2D" uid="uid://bentsvyv0sytq" path="res://Assets/Sprites/Buttons Customization/Buttons/Quit/A_Quit2.png" id="4_yhr1e"]
+[ext_resource type="Texture2D" uid="uid://dmtpcqle854j3" path="res://Assets/Sprites/Buttons Customization/Buttons/Quit/A_Quit3.png" id="5_pm5dy"]
+[ext_resource type="Texture2D" uid="uid://bm7fhiafk3ch0" path="res://Assets/Sprites/Buttons Customization/Buttons/Quit/A_Quit1.png" id="6_p6jqw"]
+
+[node name="Node2D" type="Node2D" unique_id=340358862]
+script = ExtResource("1_vbpau")
+
+[node name="Label" type="Label" parent="." unique_id=1069627878]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 621.0
+offset_top = 50.000004
+offset_right = 775.0
+offset_bottom = 229.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+text = "Congrats you win!
+
+Game made by
+- Assiya BOUSMAHA
+- Merlin BUCHOU
+- Alycia FONTEALBA
+- Omran SOLIMAN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="." unique_id=1086808748]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 85.0
+offset_top = -23.999996
+offset_right = 85.0
+offset_bottom = -23.999996
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+
+[node name="Menu" type="TextureButton" parent="Control" unique_id=495409054]
+layout_mode = 0
+offset_left = -144.00002
+offset_top = 165.33333
+offset_right = 456.0
+offset_bottom = 365.3335
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("1_d1ts3")
+texture_pressed = ExtResource("2_vbpau")
+texture_hover = ExtResource("3_ko83w")
+stretch_mode = 0
+
+[node name="Quit" type="TextureButton" parent="Control" unique_id=245342120]
+layout_mode = 0
+offset_left = -137.33333
+offset_top = 497.3333
+offset_right = 462.6667
+offset_bottom = 697.33325
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("4_yhr1e")
+texture_pressed = ExtResource("5_pm5dy")
+texture_hover = ExtResource("6_p6jqw")
+stretch_mode = 0
+
+[connection signal="pressed" from="Control/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Control/Quit" to="." method="_on_quit_pressed"]

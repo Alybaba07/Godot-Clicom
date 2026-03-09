@@ -30,30 +30,32 @@ func next_area():
 
 func load_area(area_number):
 	var full_path = area_path + "area_" + str(area_number) + ".tscn"
+	var scene_resource = load(full_path)
 	
-	#if not FileAccess.file_exists(full_path):
-		#print("Erreur : Le fichier n'existe pas -> ", full_path)
-		#return
-
-	get_tree().change_scene_to_file(full_path)
-	reset_object()
-	current_area = area_number
+	if scene_resource:
+		get_tree().change_scene_to_packed(scene_resource)
+		reset_object()
+		current_area = area_number
+		print("Chargement du niveau : ", area_number)
+	else:
+		print("Plus de niveaux trouvés. Direction l'écran de fin !")
+		var win_scene = load("res://Assets/Scenes/win_screen.tscn")
+		if win_scene:
+			get_tree().change_scene_to_packed(win_scene)
+		else:
+			push_error("Erreur critique : Impossible de trouver win_screen.tscn")
 	
 func add_object():
 	await get_tree().process_frame
 	var remaining_objects = get_tree().get_nodes_in_group("object")
-	var objet_restant = get_tree().get_nodes_in_group("object")
-	
-	# Pour HUD
-	#objet_restant -= 1
-	#hud.update_object_label(objet_restant)
 	
 	if remaining_objects.size() == 0:
-		var portal = get_tree().get_first_node_in_group("area_change") as AreaChange
-		if portal:
+		var portal = get_tree().get_first_node_in_group("area_change")
+		
+		if portal and portal.has_method("open"):
 			portal.open()
 		else:
-			push_error("Portail non trouvé ! Vérifie qu'il est dans le groupe 'area_change'")
+			push_error("Portail/Ordi non trouvé ou fonction open() manquante !")
 
 func reset_object():
 	object = 0

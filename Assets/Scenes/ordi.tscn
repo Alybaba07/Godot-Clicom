@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://u1f7tprfmepq"]
+
+[ext_resource type="Script" uid="uid://r4mmmbaorhj2" path="res://Assets/Scripts/ordi.gd" id="1_nytth"]
+[ext_resource type="Texture2D" uid="uid://dlhcnrn1g4os2" path="res://Assets/Sprites/Godot Project TD/Project GODOT.png" id="1_tnm7s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnm7s"]
+size = Vector2(32, 24)
+
+[node name="Area2D" type="Area2D" unique_id=2078262994 node_paths=PackedStringArray("sprite") groups=["area_change"]]
+script = ExtResource("1_nytth")
+sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=920815052]
+position = Vector2(0, 9.1552734e-05)
+scale = Vector2(1.166, 1)
+texture = ExtResource("1_tnm7s")
+region_enabled = true
+region_rect = Rect2(255.5, 258.665, 26.175, 30.75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1658928626]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_tnm7s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
