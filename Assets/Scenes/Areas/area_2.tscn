@@ -538,7 +538,7 @@ position = Vector2(91, 484)
 jump_power = 10.0
 
 [node name="AreaChange" parent="." unique_id=481098005 instance=ExtResource("3_fsu62")]
-position = Vector2(1591, 459)
+position = Vector2(1600, 473)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2107728163]
 scale = Vector2(0.5, 0.5)
